@@ -1,4 +1,4 @@
-# 🏃 Athle Tracker
+# 🏃 Athletix
 
 ## 📖 Description
 
