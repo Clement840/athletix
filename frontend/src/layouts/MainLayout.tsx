@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import Sidebar from "../components/sidebar";
+import Header from "../components/Header";
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -14,18 +15,10 @@ function MainLayout({ children }: MainLayoutProps) {
       <Sidebar collapsed={collapsed} />
 
       <main className="flex-1">
-        <header className="flex items-center border-b border-slate-200 bg-white px-6 py-4 shadow-sm">
-          <button
-            onClick={() => setCollapsed(!collapsed)}
-            className="rounded-lg bg-orange-600 px-4 py-2 text-white hover:bg-orange-700 transition"
-          >
-            ☰
-          </button>
-
-          <h1 className="ml-6 text-2xl font-bold text-slate-900">
-            Athletix
-          </h1>
-        </header>
+        <Header
+            collapsed={collapsed}
+            onToggleSidebar={() => setCollapsed(!collapsed)}
+        />
 
         <div className="p-8">
           {children}

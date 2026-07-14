@@ -1,3 +1,11 @@
+import {
+  House,
+  Dumbbell,
+  Trophy,
+  ChartColumn,
+  Target,
+} from "lucide-react";
+
 type SidebarProps = {
   collapsed: boolean;
 };
@@ -22,25 +30,32 @@ function Sidebar({ collapsed }: SidebarProps) {
       </div>
 
       <nav className="p-4 space-y-2">
-        <button className="w-full text-left p-3 rounded-lg hover:bg-orange-100">
-          🏠 {collapsed ? "" : "Accueil"}
+
+        <button className="flex items-center gap-3 w-full rounded-lg p-3 hover:bg-orange-100 transition">
+            <House size={20} />
+            {!collapsed && "Accueil"}
         </button>
 
-        <button className="w-full text-left p-3 rounded-lg hover:bg-orange-100">
-          🏃 {collapsed ? "" : "Entraînements"}
+        <button className="flex items-center gap-3 w-full rounded-lg p-3 hover:bg-orange-100 transition">
+            <Dumbbell size={20} />
+            {!collapsed && "Entraînements"}
         </button>
 
-        <button className="w-full text-left p-3 rounded-lg hover:bg-orange-100">
-          🏆 {collapsed ? "" : "Compétitions"}
+        <button className="flex items-center gap-3 w-full rounded-lg p-3 hover:bg-orange-100 transition">
+            <Trophy size={20} />
+            {!collapsed && "Compétitions"}
         </button>
 
-        <button className="w-full text-left p-3 rounded-lg hover:bg-orange-100">
-          📈 {collapsed ? "" : "Statistiques"}
+        <button className="flex items-center gap-3 w-full rounded-lg p-3 hover:bg-orange-100 transition">
+            <ChartColumn size={20} />
+            {!collapsed && "Statistiques"}
         </button>
 
-        <button className="w-full text-left p-3 rounded-lg hover:bg-orange-100">
-          🎯 {collapsed ? "" : "Objectifs"}
+        <button className="flex items-center gap-3 w-full rounded-lg p-3 hover:bg-orange-100 transition">
+            <Target size={20} />
+            {!collapsed && "Objectifs"}
         </button>
+
       </nav>
     </aside>
   );
