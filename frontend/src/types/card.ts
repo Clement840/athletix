@@ -1,4 +1,4 @@
-export type DashboardCard = {
+export type CardData = {
   title: string;
   description: string;
 };

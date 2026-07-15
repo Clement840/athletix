@@ -1,6 +1,6 @@
-import type { DashboardCard } from "../types/dashboard";
+import type { CardData } from "../types/card";
 
-export const dashboardCards: DashboardCard[] = [
+export const dashboardCards: CardData[] = [
   {
     title: "🏃 Dernier entraînement",
     description: "Aucune séance enregistrée.",

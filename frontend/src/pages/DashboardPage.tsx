@@ -1,5 +1,7 @@
-import Card from "../components/Card";
-import { dashboardCards } from "../data/dashboard";
+import LastTrainingCard from "../components/dashboard/LastTrainingCard";
+import LastCompetitionCard from "../components/dashboard/LastCompetitionCard";
+import ProgressCard from "../components/dashboard/ProgressCard";
+import GoalsCard from "../components/dashboard/GoalsCard";
 
 function DashboardPage() {
   return (
@@ -13,16 +15,10 @@ function DashboardPage() {
       </p>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {dashboardCards.map((card) => (
-            <Card
-                key={card.title}
-                title={card.title}
-            >
-                <p className="text-slate-500">
-                    {card.description}
-                </p>
-            </Card>
-        ))}
+        <LastTrainingCard />
+        <LastCompetitionCard />
+        <ProgressCard />
+        <GoalsCard />
       </div>
     </>
   );
